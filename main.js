@@ -18,7 +18,7 @@
 // const storageType = cookieStorage;
 function createTaskCookie(task, priority, day, time) {
     var date = new Date();
-    date.setTime(date.getTime()+ (expiry*24*60*60*1000));
+    date.setTime(date.getTime()+ (90*24*60*60*1000));
     var expires = "expires=" + date.toGMTString();
     document.cookie = task + "=" + priority + "/" + day + "/" + time + ";" + expires;
 }
