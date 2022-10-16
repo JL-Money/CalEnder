@@ -115,13 +115,13 @@ function runApp() {
 // }
 
 
-const addTask = document.getElementById(add-task);
-addTask.addEventListener("click", function() {
-    alert("event")
-})
-function change() {
-        document.getElementById("Monday").style.backgroundColor="white";
-    }
+// const addTask = document.getElementById(add-task);
+// addTask.addEventListener("click", function() {
+//     alert("event")
+// })
+// function change() {
+//         document.getElementById("Monday").style.backgroundColor="white";
+//     }
 
 
 function set_lst_of_rows(lower_time, higher_time) {
