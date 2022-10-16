@@ -2,7 +2,7 @@
   position: absolute;
   top: 12%;
   left: 15%;
-  transform: translate(-15%, -15%);
+  transform: translate(-13%, -13%);
 }
 
 .month select {
@@ -50,12 +50,6 @@ body {
     font-family: Tahoma;
 }
 
-/* h3 {
-
-
-}
- */
-
 div .query-form{
     border: 7px solid #04AA6D;
     border-radius: 15px;
@@ -66,7 +60,7 @@ div .query-form{
 h1 {
     text-align: center;
     color: white;
-    background: black;
+    background: rgb(60, 60, 96);
 }
  
  label {
@@ -109,6 +103,7 @@ table .days th {
  
 #top-title {
     flex: 90%;
+    color: lightyellow;
 }
  
 .row-obj {
@@ -123,4 +118,10 @@ table .days th {
     justify-content: space-evenly;
 }
  
- 
+ #Monday {
+    display: flex;
+ }
+
+ #Tuesday {
+    display: flex;
+ }
