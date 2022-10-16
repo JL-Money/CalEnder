@@ -35,5 +35,5 @@ function submission_confirmation(e) {
     console.log("day: " + day)
     console.log("time: " + time)
 
-    alert("Task %s priority &s has been sucessfully added.", task, priority)
+    alert("Task " + task + " priority " + priority + " has been sucessfully added.")
 }
