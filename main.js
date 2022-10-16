@@ -19,10 +19,30 @@ const cookieStorage = {
 const storageType = cookieStorage;
 function createTaskCookie(task, priority, day, time) {
     var date = new Date();
-    date.setTime(date.getTime()+ (expiry*24*60*60*1000));
+    date.setTime(date.getTime()+ (90*24*60*60*1000)); //Cookie expires in 90 days
     var expires = "expires=" + date.toGMTString();
     document.cookie = task + "=" + priority + "/" + day + "/" + time + ";" + expires;
     //cookieStorage.setItem(task, value);
+}
+
+function getAllCookies() {
+    var decoded_cookie = decodeURIComponent(document.cookie);
+	return decoded_cookie.split(';');
+}
+
+function readCookie(cname) {
+	var name = cname + "=";
+	var carr = getAllCookies();
+	for(var i=0; i<carr.length;i++){
+	    var c = carr[i];
+	    while(c.charAt(0)==' '){
+		    c=c.substring(1);
+	    }
+	    if(c.indexOf(name) == 0) {
+		    return c.substring(name.length, c.length);
+	    }
+	}
+	return "";
 }
 
 function submission_confirmation(e) {
@@ -44,3 +64,9 @@ function submission_confirmation(e) {
     alert("Task " + task + " priority " + priority + " has been sucessfully added.");
 }
 
+function runApp() {
+    var all_cookies = getAllCookies();
+    for(let i = 0; i <ca.length; i++) {
+        //TODO: set each grid to appropriate parameters
+    }
+}
