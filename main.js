@@ -1,10 +1,11 @@
-function getAllCookies() {
-    const cookies = document.cookie
-        .split(';')
-        .map(cookie => cookie.split('='))
-        .reduce((acc, [key, value]) => ({ ...acc, [key.trim()]: value }), {});
-    return cookies;
-}
+
+//function getAllCookies() {
+//     const cookies = document.cookie
+//         .split(';')
+//         .map(cookie => cookie.split('='))
+//         .reduce((acc, [key, value]) => ({ ...acc, [key.trim()]: value }), {});
+//     return cookies;
+// }
 
 const cookieStorage = {
     getItem: (item) => {
@@ -42,3 +43,4 @@ function submission_confirmation(e) {
 
     alert("Task " + task + " priority " + priority + " has been sucessfully added.");
 }
+
