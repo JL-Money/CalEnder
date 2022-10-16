@@ -85,7 +85,7 @@ function runApp() {
 
         for (let r = start_time; r < end_time; r++) {
             let row = document.getElementById(r.toString());
-            row.cells[0].innerHTML = task;
+            row.cells[column].innerHTML = task;
         }
     }
 }
