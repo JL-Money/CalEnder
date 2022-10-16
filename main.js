@@ -93,25 +93,26 @@ function runApp() {
         console.log(lst_of_rows);
         for (let r = 0; r < lst_of_rows.length; r++) {
             console.log(table.rows[0].cells[0]);
-            table.rows[lst_of_rows[r]].cells[column].innerHTML = task;
+            let cell = document.getElementById(r.toString() + day);
+            cell.innerHTML = task;
         }
     }
 }
 
-function day_to_column(day) {
-    if (day === "M") {
-        return 1;
-    } else if (day === "Tu") {
-        return 2;
-    } else if (day === "W") {
-        return 3;
-    } else if (day === "Th") {
-        return 4;
-    } else if (day === "F") {
-        return 5;
-    }
-    return null;
-}
+// function day_to_column(day) {
+//     if (day === "M") {
+//         return 1;
+//     } else if (day === "Tu") {
+//         return 2;
+//     } else if (day === "W") {
+//         return 3;
+//     } else if (day === "Th") {
+//         return 4;
+//     } else if (day === "F") {
+//         return 5;
+//     }
+//     return null;
+// }
 
 
 const addTask = document.getElementById(add-task);
