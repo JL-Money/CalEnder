@@ -8,10 +8,6 @@ function submission_confirmation(e) {
     var day = document.getElementById("day").value
     var time = document.getElementById("time").value
 
-    var tbl = document.getElementById('calender');
-
-    var row = document.getElementById("tbl").rows;
-
 
 
     console.log("task: " + task)
