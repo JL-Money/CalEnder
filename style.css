@@ -148,4 +148,6 @@ table .days th {
     justify-content: space-evenly;
 }
  
- 
+ #Monday {
+    background-color: red;
+ }

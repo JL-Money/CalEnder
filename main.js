@@ -104,3 +104,12 @@ function day_to_column(day) {
     }
     return null;
 }
+
+
+const addTask = document.getElementById(add-task);
+addTask.addEventListener("click", function() {
+    alert("event")
+})
+function change() {
+        document.getElementById("Monday").style.backgroundColor="white";
+    }
