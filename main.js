@@ -91,9 +91,9 @@ function runApp() {
         }
 
         console.log(lst_of_rows);
-        for (let r = 0; r < lst_of_rows.length; r++) {
+        for (let r = start_time; r < end_time; r++) {
             console.log(table.rows[0].cells[0]);
-            let cell = document.getElementById(r.toString() + day);
+            var cell = document.getElementById(r.toString() + day);
             cell.innerHTML = task;
         }
     }
