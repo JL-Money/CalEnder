@@ -65,7 +65,7 @@ function submission_confirmation(e) {
 }
 
 function runApp() {
-    let table = document.getElementById('calender');
+    var table = document.getElementById('calender');
     const all_cookies = getAllCookies();
     for(let i = 0; i <all_cookies.length; i++) {
         let curr_cookie = all_cookies[i]; //curr_cookie is of the form: task=priority/day/time;expires=Sat, 14 Jan 2023 16:49:12 GMT
@@ -90,7 +90,9 @@ function runApp() {
             lst_of_rows = set_lst_of_rows(end_time, start_time);
         }
 
+        console.log(lst_of_rows);
         for (let r = 0; r < lst_of_rows.length; r++) {
+            console.log(table.rows[0].cells[0]);
             table.rows[lst_of_rows[r]].cells[column].innerHTML = task;
         }
     }
