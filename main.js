@@ -83,7 +83,7 @@ function runApp() {
         let start_time = parseInt(time);
         let end_time = parseInt(time.split('-')[1]);
 
-        for (let r = start_time; r < end_time; r++) {
+        for (let r = start_time; r <= end_time; r++) {
             let row = document.getElementById(r.toString());
             row.cells[column].innerHTML = task;
         }
