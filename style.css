@@ -10,3 +10,40 @@
     margin: 4px 2px;
     border-radius: 50%;
 }
+
+body {
+    background-color: white;
+    font-family: Tahoma;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    background: black;
+}
+
+table {
+    width: 60%;
+    margin-left: 150px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+table tr, table tbody {
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    width: 100%;
+}
+
+table th {
+    line-height: 120px;
+}
+
+table .days th {
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 50px;
+    background: #333;
+    color: #fff;
+    border: none;
