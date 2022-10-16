@@ -31,11 +31,11 @@ table tr, table tbody {
     grid-column: 1/-1;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    width: 100%;
+    width: 110%;
 }
  
 table th {
-    line-height: 120px;
+    line-height: 50px;
 }
  
 table .days th {
