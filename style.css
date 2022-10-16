@@ -18,15 +18,22 @@
 }
  
 body {
+    background-image: url(photos/background.png);
     background-color: white;
     font-family: Tahoma;
 }
 
+/* h3 {
+
+
+}
+ */
 
 div .query-form{
     border: 7px solid #04AA6D;
     border-radius: 15px;
     padding: 10px;
+    color: #Fffbf8;
   }
  
 h1 {
