@@ -65,8 +65,17 @@ function submission_confirmation(e) {
 }
 
 function runApp() {
-    var all_cookies = getAllCookies();
-    for(let i = 0; i <ca.length; i++) {
-        //TODO: set each grid to appropriate parameters
+    const all_cookies = getAllCookies();
+    for(let i = 0; i <all_cookies.length; i++) {
+        let curr_cookie = all_cookies[i]; //curr_cookie is of the form: task=priority/day/time;expires=Sat, 14 Jan 2023 16:49:12 GMT
+        let key_expire_pair = curr_cookie.split(';');
+        let task_value_pair = key_expire_pair[0].split('=');
+        let task = task_value_pair[0];
+        let values = task_value_pair[1].split("/");
+        let priority = values[0];
+        let day = values[1];
+        let time = values[2];
+
+        alert("You have a "+priority+" priority "+task+" due on "+day+" at "+time);
     }
 }
