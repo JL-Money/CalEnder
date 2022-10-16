@@ -1,5 +1,10 @@
 import string
+from enum import Enum
 
+class Priority(Enum):
+    LOW = 1
+    MEDIUM = 2
+    HIGH = 3
 
 class Task:
     def __init__(self):
@@ -11,7 +16,6 @@ class Task:
         self.start = start
         self.end = end
     def set_priority(self, priority):
-        assert priority >= 1 and priority <= 5
-        assert type(priority) == int
+        assert type(priority) == Priority
         self.priority = priority
     
