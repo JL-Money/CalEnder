@@ -124,5 +124,9 @@ table .days th {
 }
  
  #Monday {
-    background-color: red;
+    display: flex;
+ }
+
+ #Tuesday {
+    display: flex;
  }
