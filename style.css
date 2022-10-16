@@ -10,36 +10,34 @@
     margin: 4px 2px;
     border-radius: 50%;
 }
-
+ 
 body {
     background-color: white;
     font-family: Tahoma;
 }
-
+ 
 h1 {
     text-align: center;
     color: white;
     background: black;
 }
-
-table {
-    width: 60%;
-    margin-left: 150px;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-}
-
+ 
+ label {
+    font-size: large;
+    font-weight: bold;
+ }
+ 
 table tr, table tbody {
     grid-column: 1/-1;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     width: 100%;
 }
-
+ 
 table th {
     line-height: 120px;
 }
-
+ 
 table .days th {
     text-align: center;
     text-transform: uppercase;
@@ -48,21 +46,38 @@ table .days th {
     color: #fff;
     border: none;
 }
-
+ 
 .row {
     flex-direction: flex;
 }
-
+ 
 .image {
     height: 50px;
     width: 50px;
 }
-
+ 
 #profile {
     flex: 10%;
 }
-
+ 
 #top-title {
     flex: 90%;
 }
+ 
+.row-obj {
+    padding: 10px;
+    border: 30px;
+    border: black 5px;
+}
+ 
+.calendar-and-task {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+ 
+.query-form {
+    border: black 5px;
+}
+ 
 

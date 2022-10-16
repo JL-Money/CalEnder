@@ -17,94 +17,106 @@
       
     <div class="row">
       <h1 id="top-title">CalEnder</h1>
-        <img class="image" id="profile" src="photos/profile_icon.png">
+        <img class="image" id="profile" src="photos/profile_icon.png" alt="profile">
     </div>
 
-      <table id='calender' border="2">
-        <tr class = "days">
+
+    <div class ="calendar-and-task">
+      <table class="row-obj" id='calender' border="2">
+          <tr class = "days">
           <th>Days</th>
           <th>Monday</th>
           <th>Tuesday</th>
           <th>Wednesday</th>
           <th>Thursday</th>
           <th>Friday</th>
-  
-        </tr>
-        <tr>
+ 
+          </tr>
+          <tr>
           <th>8:00-9:00</th>
-          <th>Task</th>
-          <th>Task</th>
-          <th>Task</th>
-          <th>Task</th>
-          <th>Task</th>
-        </tr>
-  
-        <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          </tr>
+ 
+          <tr>
           <th>9:00-10:00</th>
-          <th>Task</th>
-          <th>Task</th>
-          <th>Task</th>
-          <th>Task</th>
-          <th>Task</th>
-        </tr>
-  
-        <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          </tr>
+ 
+          <tr>
           <th>10:00-11:00</th>
-          <th>Task</th>
-          <th>Task</th>
-          <th>Task</th>
-          <th>Task</th>
-          <th>Task</th>
-        </tr>
-  
-        <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          </tr>
+ 
+          <tr>
           <th>11:00-12:00</th>
-          <th>Task</th>
-          <th>Task</th>
-          <th>Task</th>
-          <th>Task</th>
-          <th>Task</th>
-        </tr>
-     </table>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          </tr>
+      </table>
 
 
-      <form class="query-form">
-        <div class="form-inputs">
-            <label for="task">Task name:</label>
-            <input type="text" id="task" placeholder="Math Homework">
-        </div>
+      <div class="row-obj">
+        <form class="query-form">
+            <div class="form-inputs">
+                <label for="task">Task name:</label>
+                <input type="text" id="task" placeholder="Math Homework">
+            </div>
+            <br>
+            <br>
 
-        <div class="form-inputs">
-            <label for="priority">Priority Level:</label>
-            <select name="priority" id="priority">
-                <option value="high">High</option>
-                <option value="medium">Medium</option>
-                <option value="low">Low</option>
-            </select>
-        </div>
 
-       <div class="form-inputs">
-            <label for="day">Day:</label>
-            <select name="day" id="day">
-                <option value="Monday">M</option>
-                <option value="Tuesday">Tu</option>
-                <option value="Wednesday">W</option>
-                <option value="Thursday">Th</option>
-                <option value="Friday">F</option>
-                <option value="Saturday">S</option>
-                <option value="Sunday">Su</option>
-            </select>
-       </div>
+            <div class="form-inputs">
+              <label for="priority">Priority level:</label>
+              <select name="priority" id="priority">
+                  <option value="high">High</option>
+                  <option value="medium">Medium</option>
+                  <option value="low">Low</option>
+              </select>
+          </div>
+          <br>
+          <br>
+          <div class="form-inputs">
+              <label for="day">Day:</label>
+              <select name="day" id="day">
+                  <option value="Monday">M</option>
+                  <option value="Tuesday">Tu</option>
+                  <option value="Wednesday">W</option>
+                  <option value="Thursday">Th</option>
+                  <option value="Friday">F</option>
+                  <option value="Saturday">S</option>
+                  <option value="Sunday">Su</option>
+              </select>
+          </div>
+          <br>
+          <br>
+          <div class="form-inputs">
+              <label for="time">Time:</label>
+              <input type="text" id="time" placeholder="10:00-11:00">
+          </div>
+          <br>
+          <br>
 
-      <div class="form-inputs">
-            <label for="time">Time:</label>
-            <input type="text" id="time" placeholder="10:00-11:00">
-      </div>
       <button id="add-task" type="submit" onClick="submission_confirmation(event)">Add</button>
+        </div>
+        </div>
 
 
-
-      <img src="photos/settings_icon.png">
+        <img class="image" src="photos/settings_icon.png" alt="settings">
 
 
 
