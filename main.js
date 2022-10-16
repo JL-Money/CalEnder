@@ -1,3 +1,23 @@
+function getAllCookies() {
+    const cookies = document.cookie
+        .split(';')
+        .map(cookie => cookie.split('='))
+        .reduce((acc, [key, value]) => ({ ...acc, [key.trim()]: value }), {});
+    return cookies;
+}
+
+const cookieStorage = {
+    getItem: (item) => {
+        return getAllCookies()[item];
+    },
+    setItem: (key, value) => {
+        document.cookie = `${key}=${value}`;
+    },
+};
+
+const storageType = cookieStorage;
+
+
 function submission_confirmation(e) {
     e.preventDefault();
     // TODO: Fill in the rest 
@@ -15,5 +35,5 @@ function submission_confirmation(e) {
     console.log("day: " + day)
     console.log("time: " + time)
 
-    alert("Task has been sucessfully added.")
+    alert("Task " + task + " priority " + priority + " has been sucessfully added.")
 }
