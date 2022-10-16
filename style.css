@@ -47,3 +47,22 @@ table .days th {
     background: #333;
     color: #fff;
     border: none;
+}
+
+.row {
+    flex-direction: flex;
+}
+
+.image {
+    height: 50px;
+    width: 50px;
+}
+
+#profile {
+    flex: 10%;
+}
+
+#top-title {
+    flex: 90%;
+}
+
