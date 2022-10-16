@@ -65,6 +65,7 @@ function submission_confirmation(e) {
 }
 
 function runApp() {
+    let table = document.getElementById('calender');
     const all_cookies = getAllCookies();
     for(let i = 0; i <all_cookies.length; i++) {
         let curr_cookie = all_cookies[i]; //curr_cookie is of the form: task=priority/day/time;expires=Sat, 14 Jan 2023 16:49:12 GMT
@@ -77,5 +78,29 @@ function runApp() {
         let time = values[2];
 
         alert("You have a "+priority+" priority "+task+" due on "+day+" at "+time);
+
+        let column = day_to_column(day);
+        let start_time = parseInt(time);
+        let end_time = parseInt(time.split('-')[1]);
+
+        for (let r = start_time; r <= end_time; r++) {
+            let row = document.getElementById(r.toString());
+            row.cells[column].innerHTML = task;
+        }
     }
+}
+
+function day_to_column(day) {
+    if (day === "M") {
+        return 1;
+    } else if (day === "Tu") {
+        return 2;
+    } else if (day === "W") {
+        return 3;
+    } else if (day === "Th") {
+        return 4;
+    } else if (day === "F") {
+        return 5;
+    }
+    return null;
 }
