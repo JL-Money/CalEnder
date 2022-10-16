@@ -83,9 +83,15 @@ function runApp() {
         let start_time = parseInt(time);
         let end_time = parseInt(time.split('-')[1]);
 
-        for (let r = start_time; r <= end_time; r++) {
-            let row = document.getElementById(r.toString());
-            row.cells[column].innerHTML = task;
+        let lst_of_rows = [];
+        if (start_time < end_time) {
+            lst_of_rows = set_lst_of_rows(start_time, end_time);
+        } else if (end_time < start_time) {
+            lst_of_rows = set_lst_of_rows(end_time, start_time);
+        }
+
+        for (let r = 0; r < lst_of_rows.length; r++) {
+            table.rows[lst_of_rows[r]].cells[column].innerHTML = task;
         }
     }
 }
@@ -113,3 +119,17 @@ addTask.addEventListener("click", function() {
 function change() {
         document.getElementById("Monday").style.backgroundColor="white";
     }
+
+
+function set_lst_of_rows(lower_time, higher_time) {
+    let lst = [];
+    for (let x = lower_time; x < higher_time; x++) {
+        lst_of_rows.push(x - 7);
+    }
+    for (let y = 0; y<lst.length; y++) {
+        if (lst[y] < 1) {
+            lst[y] += 12;
+        }
+    }
+    return lst;
+}
