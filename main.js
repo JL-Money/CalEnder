@@ -79,23 +79,23 @@ function runApp() {
 
         alert("You have a "+priority+" priority "+task+" due on "+day+" at "+time);
 
-        let column = day_to_column(day);
-        let start_time = parseInt(time);
-        let end_time = parseInt(time.split('-')[1]);
+        // let column = day_to_column(day);
+        // let start_time = parseInt(time);
+        // let end_time = parseInt(time.split('-')[1]);
 
-        let lst_of_rows = [];
-        if (start_time < end_time) {
-            lst_of_rows = set_lst_of_rows(start_time, end_time);
-        } else if (end_time < start_time) {
-            lst_of_rows = set_lst_of_rows(end_time, start_time);
-        }
+        // let lst_of_rows = [];
+        // if (start_time < end_time) {
+        //     lst_of_rows = set_lst_of_rows(start_time, end_time);
+        // } else if (end_time < start_time) {
+        //     lst_of_rows = set_lst_of_rows(end_time, start_time);
+        // }
 
-        console.log(lst_of_rows);
-        for (let r = start_time; r < end_time; r++) {
-            console.log(table.rows[0].cells[0]);
-            var cell = document.getElementById(r.toString() + day);
-            cell.innerHTML = task;
-        }
+        // console.log(lst_of_rows);
+        // for (let r = start_time; r < end_time; r++) {
+        //     console.log(table.rows[0].cells[0]);
+        //     var cell = document.getElementById(r.toString() + day);
+        //     cell.innerHTML = task;
+        // }
     }
 }
 
